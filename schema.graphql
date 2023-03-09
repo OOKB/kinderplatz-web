@@ -1,0 +1,11 @@
+type Page {
+  content: String
+  id: ID!
+  slug: String
+  title: String
+}
+
+type Query {
+  page(id: ID!): Page
+  pages: [Page]
+}
