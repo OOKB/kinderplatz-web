@@ -1,8 +1,6 @@
 <script>
   import Logo from './logo.svelte'
 
-  /** @type {import('./$types').LogoBannerData} */
-  export let data
   export let title = ""
 </script>
 
