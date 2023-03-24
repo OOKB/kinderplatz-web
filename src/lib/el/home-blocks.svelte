@@ -1,5 +1,5 @@
 <div class="blocks flex">
-  <div class="block bg-orange flex">
+  <div class="block bg-orange-500 flex">
     <a href="introduction.html" class="flex darkgray no-style darkgray-hover">
       <p>Learn</p>
     </a>
