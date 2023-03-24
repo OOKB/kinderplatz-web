@@ -1,0 +1,7 @@
+query PageData($slug: ID!) {
+  page(id: $slug, isSlug: true) {
+    id
+    title
+    content
+  }
+}

@@ -6,6 +6,6 @@ type Page {
 }
 
 type Query {
-  page(id: ID!): Page
+  page(id: ID!, isSlug: Boolean): Page
   pages: [Page]
 }
