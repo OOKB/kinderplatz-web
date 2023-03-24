@@ -8,7 +8,7 @@
 
 <LogoBanner {title} />
 
-<aside></aside>
+<slot name="aside" />
 <article>
   <SvelteMarkdown source={content} />
   <slot />
