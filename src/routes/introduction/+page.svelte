@@ -7,10 +7,9 @@
   $: ({ Intro } = data)
 </script>
 
-<LogoBanner title="Introduction" />
+<LogoBanner title={$Intro.data.page.title}/>
 
 <aside></aside>
 <article>
-  <h2>{$Intro.data.page.title}</h2>
   <SvelteMarkdown source={$Intro.data.page.content} />
 </article>
