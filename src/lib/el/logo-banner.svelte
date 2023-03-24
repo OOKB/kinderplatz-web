@@ -8,25 +8,18 @@
 
   $: bgColor = getSlugColor($page.params.slug)
 </script>
-
-<div class="place-content-center grid grid-cols-1 max-w-sm items-center justify-center banner {bgColor}">
+<!-- flex justify-center items-center -->
+<div class="flex justify-center items-center h-20 {bgColor}">
   <Logo />
-  <h1 class="absolute">{title}</h1>
+  <h1 class="title z-0 absolute italic uppercase whitespace-nowrap tracking-tighter text-9xl">{title}</h1>
 </div>
 
-<!-- Probably convert this to tailwind css -->
+<!-- Probably convert this to tailwind css? -->
 <style>
-  .banner h1 {
-    position: absolute;
-    font-size: 18vw;
-    font-style: italic;
+  h1.title {
     font-weight: 400;
     font-family: var(--font-stack-serif);
-    letter-spacing: -.08em;
-    z-index: 0;
     left: -2vw;
-    white-space: nowrap;
-    text-transform: uppercase;
     transform: rotate(0.02turn);
   }
 </style>
