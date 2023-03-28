@@ -3,6 +3,17 @@ const IMG_URL = 'https://img.rogersandgoffigon.com'
 // @TODO Make a query to get this information.
 
 export const pages = {
+  agegroups: {
+    slug: 'agegroups',
+    url: '/agegroups',
+    sectionColor: 'green-500',
+    links: [
+
+    ],
+  },
+  ['ageGroups/immersion']: {
+
+  },
   contact: {
     slug: 'contact',
     url: '/contact',
@@ -47,14 +58,11 @@ export const pages = {
       }
     ]
   },
-  agegroups: {
-    sectionColor: 'bg-green-500',
-    links: [
-
-    ],
-  },
-  ['ageGroups/immersion']: {
-    
+  introduction: {
+    slug: 'introduction',
+    url: '/introduction',
+    name: 'Introduction',
+    sectionColor: 'orange-500',
   },
   tuition: {
     slug: 'tuition',
