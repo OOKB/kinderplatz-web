@@ -1,6 +1,12 @@
 const IMG_URL = 'https://img.rogersandgoffigon.com'
+
+// @TODO Make a query to get this information.
+
 export const pages = {
   contact: {
+    slug: 'contact',
+    url: '/contact',
+    name: 'Contact Us',
     sectionColor: 'red-500',
     images: [
       {
@@ -20,6 +26,9 @@ export const pages = {
     ]
   },
   credentials: {
+    slug: 'credentials',
+    url: '/credentials',
+    name: 'Credentials',
     sectionColor: 'fuchsia-500',
     images: [
       {
@@ -33,10 +42,35 @@ export const pages = {
     ],
     links: [
       {
-        href: '#staff',
+        href: '/credentials#staff',
         name: 'Staff',
       }
     ]
   },
+  agegroups: {
+    sectionColor: 'bg-green-500',
+    links: [
+
+    ],
+  },
+  ['ageGroups/immersion']: {
+    
+  },
+  tuition: {
+    slug: 'tuition',
+    url: '/tuition',
+    name: 'Tuition',
+    links: [
+      {
+        href: '/tuition/#tuition',
+        name: 'Tuition & Terms'
+      },
+      {
+        href: '/tuition/#enrollment-policies',
+        name: 'Enrollment Policies',
+      }
+    ],
+  },
 }
+
 export const getPageInfo = (id) => (pages[id] || null)
