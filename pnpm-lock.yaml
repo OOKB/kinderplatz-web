@@ -15,6 +15,7 @@ specifiers:
   lodash: ^4.17.21
   photoswipe: ^5.3.6
   postcss: ^8.4.21
+  prairie: ^4.0.0
   prettier: ^2.8.7
   prettier-plugin-svelte: ^2.10.0
   svelte: ^3.57.0
@@ -22,6 +23,7 @@ specifiers:
   svelte-markdown: ^0.2.3
   tailwindcss: ^3.2.7
   typescript: ^5.0.2
+  understory: ^2.0.2
   vite: ^4.2.1
   vitest: ^0.29.7
 
@@ -29,7 +31,9 @@ dependencies:
   classnames: 2.3.2
   lodash: 4.17.21
   photoswipe: 5.3.6
+  prairie: 4.0.0
   svelte-markdown: 0.2.3_svelte@3.57.0
+  understory: 2.0.2
 
 devDependencies:
   '@playwright/test': 1.32.0
@@ -2292,6 +2296,14 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
+  /prairie/4.0.0:
+    resolution: {integrity: sha512-UFg1fkpKh8uqKZeMC4MK444EDfYd8vE7bjbmGzLYkb7yv1XQsPXSMW8L7FQqB1e8D2M9ntREA7CHpFtZvBwWBw==}
+    engines: {node: ^14.13.1 || >=16.0.0}
+    dependencies:
+      lodash: 4.17.21
+      understory: 2.0.2
+    dev: false
+
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
@@ -2799,6 +2811,13 @@ packages:
   /ufo/1.1.1:
     resolution: {integrity: sha512-MvlCc4GHrmZdAllBc0iUDowff36Q9Ndw/UzqmEKyrfSzokTd9ZCy1i+IIk5hrYKkjoYVQyNbrw7/F8XJ2rEwTg==}
     dev: true
+
+  /understory/2.0.2:
+    resolution: {integrity: sha512-TGeXEjF4otYD2IfCW66KsREE/hjykjzmNRmoOkKAHqvCZs+HPDYGnAHXziZxKB997t1MXcpHB8I9+vg25JjbBQ==}
+    engines: {node: ^14.13.1 || >=16.0.0}
+    dependencies:
+      lodash: 4.17.21
+    dev: false
 
   /undici/5.21.0:
     resolution: {integrity: sha512-HOjK8l6a57b2ZGXOcUsI5NLfoTrfmbOl90ixJDl0AEFG4wgHNDQxtZy15/ZQp7HhjkpaGlp/eneMgtsu1dIlUA==}
