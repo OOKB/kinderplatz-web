@@ -6,7 +6,7 @@ const sectionColors = {
   credentials: 'bg-fuchsia-500',
   introduction: 'bg-orange-500',
   testimonials: 'bg-pink-600',
-  tuition: 'bg-blue-600 ',
+  tuition: 'bg-blue-600',
 }
 
 export function getSlugColor(id) {

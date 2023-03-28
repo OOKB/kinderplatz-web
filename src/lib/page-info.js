@@ -6,6 +6,7 @@ export const pages = {
   agegroups: {
     slug: 'agegroups',
     url: '/agegroups',
+    name: 'Age Groups',
     sectionColor: 'green-500',
     links: [
 
@@ -13,6 +14,12 @@ export const pages = {
   },
   ['ageGroups/immersion']: {
 
+  },
+  approach: {
+    slug: 'approach',
+    url: '/approach',
+    name: 'Approach',
+    sectionColor: 'yellow-500',
   },
   contact: {
     slug: 'contact',
@@ -64,10 +71,14 @@ export const pages = {
     name: 'Introduction',
     sectionColor: 'orange-500',
   },
+  testimonials: {
+    sectionColor: 'pink-600',
+  },
   tuition: {
     slug: 'tuition',
     url: '/tuition',
     name: 'Tuition',
+    sectionColor: 'blue-600',
     links: [
       {
         href: '/tuition/#tuition',
