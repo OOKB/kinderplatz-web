@@ -2,13 +2,13 @@
   import { pages } from '$lib/page-info.js'
   import Link from './link.svelte'
   const links = [
-    'introduction', 'approach', 'agegroups', 'tuition', 'credentials',
+    'introduction', 'approach', 'agegroups', 'tuition', 'credentials', 'contact',
   ].map((slug) => pages[slug])
 </script>
 
 <header>
   <nav id="mainMenu">
-    <ul class="flex list-reset">
+    <ul class="flex justify-between">
       {#each links as link}
         <Link {...link} />
       {/each}

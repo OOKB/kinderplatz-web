@@ -6,5 +6,5 @@
 </script>
 
 <li>
-  <a class={textColor} href={url}>{name}</a>
+  <a class="px-16 py-4 {textColor}" href={url}>{name}</a>
 </li>
