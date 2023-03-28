@@ -1,6 +1,23 @@
+type FileInfo {
+  ctime: String!
+  mtime: String!
+  size: Int!
+  title: String!
+}
+
+type Heading {
+  depth: Int!
+  id: String!
+  title: String!
+  url: String
+}
+
 type Page {
+  collection: String
   content: String
+  headings: [Heading]
   id: ID!
+  info: FileInfo
   slug: String
   title: String
 }
