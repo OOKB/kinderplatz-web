@@ -8,8 +8,7 @@
 
   $: bgColor = getSlugColor($page.params.slug, $page.route.id)
 </script>
-<!-- flex justify-center items-center -->
-<div class="flex justify-center items-center h-20 {bgColor}">
+<div class="flex static h-20 {bgColor}">
   <Logo />
   <h1 class="title z-0 absolute italic uppercase whitespace-nowrap tracking-tighter text-9xl">{title}</h1>
 </div>

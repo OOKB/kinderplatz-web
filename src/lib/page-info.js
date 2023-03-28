@@ -79,6 +79,12 @@ export const pages = {
     url: '/tuition',
     name: 'Tuition',
     sectionColor: 'blue-600',
+    images: [
+      {
+        src: `${IMG_URL}/b2/path/w450/kinderplatz/images/general//bernard-hermant-Yfjl81rcY9M-unsplash.jpg`,
+        alt: 'Boy with knit blue hat',
+      },
+    ],
     links: [
       {
         href: '/tuition/#tuition',

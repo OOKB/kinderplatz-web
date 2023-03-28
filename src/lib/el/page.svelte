@@ -7,9 +7,10 @@
 </script>
 
 <LogoBanner {title} />
-
-<slot name="aside" />
-<article>
-  <SvelteMarkdown source={content} />
-  <slot />
-</article>
+<div class="flex">
+  <slot name="aside" />
+  <article>
+    <SvelteMarkdown source={content} />
+    <slot />
+  </article>
+</div>
