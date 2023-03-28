@@ -12,6 +12,6 @@
 
 <Page title={$PageData.data.page.title} content={$PageData.data.page.content}>
   {#if pageInfo && pageInfo.images}
-    <Aside slot="aside" images={pageInfo.images} links={pageInfo.links} />
+    <Aside images={pageInfo.images} links={pageInfo.links} />
   {/if}
 </Page>

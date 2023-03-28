@@ -13,10 +13,10 @@
 
 <Page title={$Contact.data.page.title} content={$Contact.data.page.content}>
   {#if pageInfo && pageInfo.images}
-    <Aside slot="aside" images={pageInfo.images} links={pageInfo.links} />
+    <Aside images={pageInfo.images} links={pageInfo.links} />
   {/if}
 
-  <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <section class="grid grid-cols-1 sm:grid-cols-2 gap-4" slot="article-bottom">
     <Address />
     <ContactBlock />
   </section>

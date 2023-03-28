@@ -8,9 +8,9 @@
 
 <LogoBanner {title} />
 <div class="flex">
-  <slot name="aside" />
-  <article>
+  <slot />
+  <article class="flex-1">
     <SvelteMarkdown source={content} />
-    <slot />
+    <slot name="article-bottom" />
   </article>
 </div>
