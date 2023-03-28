@@ -1,6 +1,6 @@
-<div class="logo">
+<div class="flex justify-center">
 
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/" viewBox=" 0 0 262.6 55.7">
+  <svg class="w-6/12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/" viewBox=" 0 0 262.6 55.7">
 
     <g class="wrap">
       <path class="fill-orange-500" d="M262,11.6h-16.8v3.7h11.3l-11.8,13.5v3.1h17.9v-3.7h-12.4L262,14.7V11.6z M239.3,15.3v-3.7h-9.5v-7l-4.1,1.4
