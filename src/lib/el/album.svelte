@@ -46,7 +46,7 @@
                       {image.thumbnail.src}?dpr=2 2x,
                       {image.thumbnail.src}?dpr=2 3x"
               src="{image.thumbnail.src}"
-              alt=""
+              alt="{image.alt}"
             />
           </a>
         </li>
