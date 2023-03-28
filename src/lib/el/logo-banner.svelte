@@ -6,7 +6,7 @@
   export let title = ""
   export let slug = ''
 
-  $: bgColor = getSlugColor($page.params.slug)
+  $: bgColor = getSlugColor($page.params.slug, $page.route.id)
 </script>
 <!-- flex justify-center items-center -->
 <div class="flex justify-center items-center h-20 {bgColor}">

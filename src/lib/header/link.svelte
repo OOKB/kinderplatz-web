@@ -1,10 +1,14 @@
 <script>
+  import { page } from '$app/stores';
+
   export let sectionColor = ''
   export let url = ''
   export let name = ''
-  $: textColor = `text-${sectionColor}`
+  $: active = url === $page.url.pathname
+  $: textColor = active ? 'text-slate-50' : `text-${sectionColor}`
+  $: background = active ? `bg-${sectionColor}` : ''
 </script>
 
 <li>
-  <a class="px-16 py-4 {textColor}" href={url}>{name}</a>
+  <a class="px-16 py-4 {textColor} {background}" href={url}>{name}</a>
 </li>
