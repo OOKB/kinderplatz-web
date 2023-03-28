@@ -1,7 +1,7 @@
 const IMG_URL = 'https://img.rogersandgoffigon.com'
 export const pages = {
   contact: {
-    sectionColor: 'bg-red-500',
+    sectionColor: 'red-500',
     images: [
       {
         src: `${IMG_URL}/b2/path/w450/kinderplatz/images/general/elizaveta-dushechkina-XPLCCRTX3ic-unsplash.jpg`,
@@ -20,7 +20,7 @@ export const pages = {
     ]
   },
   credentials: {
-    sectionColor: 'bg-fuchsia-500',
+    sectionColor: 'fuchsia-500',
     images: [
       {
         src: `${IMG_URL}/b2/path/w450/kinderplatz/images/general/jason-leung-Xaanw0s0pMk-unsplash.jpg`,
