@@ -10,4 +10,16 @@ module.exports = {
     },
   },
   plugins: [],
+  // Color styles that are used dynamically and not hardcoded in the theme.
+  safelist: [
+    'text-blue-600',
+    'text-orange-500',
+    'text-green-500',
+    'text-fuchsia-500',
+    'text-yellow-500',
+    'text-red-500',
+    'text-pink-600',
+    'bg-orange-500',
+    'bg-fuchsia-500',
+  ],
 }

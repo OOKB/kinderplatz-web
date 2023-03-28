@@ -2,8 +2,9 @@
   export let sectionColor = ''
   export let url = ''
   export let name = ''
+  $: textColor = `text-${sectionColor}`
 </script>
 
 <li>
-  <a class="text-{sectionColor}" href={url}>{name}</a>
+  <a class={textColor} href={url}>{name}</a>
 </li>
