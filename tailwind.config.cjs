@@ -8,25 +8,39 @@ module.exports = {
       current: 'currentColor',
       'black': '#0a0000',
       'white': '#fffafa',
-      'pink': '#cc6699',
-      'brown': '#2f2926',
-      'lightgray': '#a9a99b',
-      'gray': '#848478',
-      'darkgray': '#606767',
-      'red': '#ff0000',
+      'pink': {
+        500: '#cc6699',
+        DEFAULT: '#cc6699',
+      },
+      'brown': {
+        500: '#2f2926',
+        DEFAULT: '#2f2926',
+      },
+      'gray': {
+        500: '#848478',
+        DEFAULT: '#848478',
+      },
+      'red': {
+        500: '#ff0000',
+        DEFAULT: '#ff0000',
+      },
       'orange': '#ff6600',
       'amber': '#803300',
       'yellow': '#e1be00',
-      'gold': '#78643c',
-      'lightgreen': '#cbff32',
       'green': '#0ab43c',
       'blue': '#1e78c8',
       'indigo': '#0a2842',
       'purple': '#c864c8',
-      'darkpurple': '#643264',
+      'fuschia': '#c864c8',
     },
     extend: {
-
+      colors: {
+        'lightgray': '#a9a99b',
+        'darkgray': '#606767',
+        'gold': '#78643c',
+        'lightgreen': '#cbff32',
+        'darkpurple': '#643264',
+      }
     },
     fontSize: {
       '9xl': '18vw',
