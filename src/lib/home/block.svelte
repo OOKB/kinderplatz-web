@@ -6,12 +6,14 @@
   export let word = ''
   export let image = ''
   const mediaServer = 'https://kinderplatz-api.pages.dev'
-  $: classStyle = classNames('block', color, 'flex-initial', 'w-64', 'h-64', { imgBlk: image })
+  $: classStyle = classNames(color, { imgBlk: image })
 </script>
 
-<div class={classStyle} style={image ? `background-image: url(${mediaServer}${image});` : ''}>
+<div
+  class="block flex-initial h-64 w-64 justify-center {classStyle}"
+  style={image ? `background-image: url(${mediaServer}${image});` : ''}>
   {#if link}
-    <a href="{link}" class="text-gray-700 no-style">
+    <a href="{link}" class="text-gray-700">
       <p>{word}</p>
     </a>
   {:else}

@@ -7,7 +7,7 @@ export const pages = {
     slug: 'agegroups',
     url: '/agegroups',
     name: 'Age Groups',
-    sectionColor: 'green-500',
+    sectionColor: 'lime',
     links: [
 
     ],
@@ -19,13 +19,13 @@ export const pages = {
     slug: 'approach',
     url: '/approach',
     name: 'Approach',
-    sectionColor: 'yellow-500',
+    sectionColor: 'yellow',
   },
   contact: {
     slug: 'contact',
     url: '/contact',
     name: 'Contact Us',
-    sectionColor: 'red-500',
+    sectionColor: 'red',
     images: [
       {
         src: `${IMG_URL}/b2/path/w450/kinderplatz/images/general/elizaveta-dushechkina-XPLCCRTX3ic-unsplash.jpg`,
@@ -47,7 +47,7 @@ export const pages = {
     slug: 'credentials',
     url: '/credentials',
     name: 'Credentials',
-    sectionColor: 'fuchsia-500',
+    sectionColor: 'fuchsia',
     images: [
       {
         src: `${IMG_URL}/b2/path/w450/kinderplatz/images/general/jason-leung-Xaanw0s0pMk-unsplash.jpg`,
@@ -69,16 +69,16 @@ export const pages = {
     slug: 'introduction',
     url: '/introduction',
     name: 'Introduction',
-    sectionColor: 'orange-500',
+    sectionColor: 'orange',
   },
   testimonials: {
-    sectionColor: 'pink-600',
+    sectionColor: 'pink',
   },
   tuition: {
     slug: 'tuition',
     url: '/tuition',
     name: 'Tuition',
-    sectionColor: 'blue-600',
+    sectionColor: 'sky',
     images: [
       {
         src: `${IMG_URL}/b2/path/w450/kinderplatz/images/general/bernard-hermant-Yfjl81rcY9M-unsplash.jpg`,
