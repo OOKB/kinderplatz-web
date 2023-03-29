@@ -4,7 +4,7 @@
 
 <div class="flex">
 
-  <Block link="/introduction" word="Learn" color="bg-orange-500" />
+  <Block link="/introduction" word="Learn" color="bg-orange" />
   <Block image="/media/andriyko-podilnyk-XH9NoY2RTwY-unsplash.jpg" />
   <Block word="Share" />
   <Block word="Grow" />

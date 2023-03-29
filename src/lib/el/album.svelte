@@ -33,8 +33,9 @@
     <h4 class="bordertop">Infant/Toddler Wing</h4>
     <ul class="flex flex-wrap pswp-gallery" id="{id}">
       {#each images as image}
-        <li>
+        <li class="p-1">
           <a
+            class=""
             href="{image.src}"
             data-pswp-width={image.width}
             data-pswp-height={image.height}
@@ -42,6 +43,7 @@
             rel="noreferrer"
           >
             <img
+              class="object-cover w-40 h-40"
               srcset="{image.thumbnail.src}?dpr=1 1x,
                       {image.thumbnail.src}?dpr=2 2x,
                       {image.thumbnail.src}?dpr=2 3x"
