@@ -31,7 +31,7 @@
   <!-- Infant/Toddler Wing -->
   <div class="container">
     <h4 class="bordertop">Infant/Toddler Wing</h4>
-    <ul class="photos pswp-gallery" id="{id}">
+    <ul class="flex flex-wrap pswp-gallery" id="{id}">
       {#each images as image}
         <li>
           <a
