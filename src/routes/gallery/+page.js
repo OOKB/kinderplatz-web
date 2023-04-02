@@ -2,7 +2,7 @@ import _ from 'lodash/fp.js'
 // import { oneOf } from 'understory'
 import { setFieldWith } from 'prairie'
 // Change these URLs to be on CAPE or something.
-const URL = 'https://img.rogersandgoffigon.com/files'
+const LIST_FILES_URL = 'https://img.rogersandgoffigon.com/b2/files/cape-client/kinderplatz'
 const IMG_URL = 'https://img.rogersandgoffigon.com/b2'
 // const IMG_URL = 'http://127.0.0.1:8787/b2'
 
@@ -19,8 +19,8 @@ const getName = _.flow(
 const getImg = _.flow(
   setFieldWith('name', 'fileName', getName),
   _.pick(['fileId', 'height', 'width', 'segment', 'id', 'name']),
-  setFieldWith('src', 'fileId', getUrl('raw')),
-  setFieldWith('thumbnail', 'fileId', getThumbnail),
+  setFieldWith('src', 'id', getUrl('raw')),
+  setFieldWith('thumbnail', 'id', getThumbnail),
 )
 const getImages = _.flow(
   // _.slice(0, 5),
@@ -33,7 +33,7 @@ export const prerender = true;
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
-  const res = await fetch(URL);
+  const res = await fetch(LIST_FILES_URL);
   const { results } = await res.json();
   const images = getImages(results)
   const infant = getOtherImgs(['cr-p054', 'cr-p055', 'cr-p056', 'cr-p057', 'cr-p058'], images)
