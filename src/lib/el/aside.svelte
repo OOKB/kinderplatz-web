@@ -3,13 +3,16 @@
   export let images = []
   export let links = []
   export let color = ""
+  function getSrc(image) {
+    return image.src.replace('/images/', '/images/w450/')
+  }
 </script>
 
 <aside>
   {#if _.get('[0].src', images)}
     <div class="">
       <img
-        src="{images[0].src}"
+        src="{getSrc(images[0])}"
         alt="{images[0].alt}"
       />
     </div>
@@ -27,7 +30,7 @@
   {#if _.get('[1].src', images)}
     <div class="">
       <img
-        src="{images[1].src}"
+        src="{getSrc(images[1])}"
         alt="{images[1].alt}"
       />
     </div>

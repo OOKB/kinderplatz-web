@@ -8,10 +8,11 @@
   $: active = url === $page.url.pathname
   $: textColor = active ? 'text-slate-50' : `text-${sectionColor}`
   $: background = active ? `bg-${sectionColor}` : ''
+  $: border = active ? '' : 'border-b border-orange'
 </script>
 
-<li>
-  <a class="px-16 py-4 hover:bg-{sectionColor} {textColor} {background}" href={url}>
+<li class="py-2 flex-1 {background} {border}">
+  <a class="hover:bg-{sectionColor} {textColor}" href={url}>
     {name}
   </a>
 </li>
