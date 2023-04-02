@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 // [
@@ -141,6 +142,7 @@ module.exports = {
 
     },
     fontSize: {
+      ...defaultTheme.fontSize,
       '9xl': '18vw',
     },
   },
