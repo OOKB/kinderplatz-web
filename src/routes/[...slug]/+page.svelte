@@ -10,8 +10,10 @@
   $: pageInfo = getPageInfo($page.params.slug)
 </script>
 
-<Page title={$PageData.data.page.title} content={$PageData.data.page.content}>
-  {#if pageInfo && pageInfo.images}
-    <Aside images={pageInfo.images} links={pageInfo.links} />
-  {/if}
-</Page>
+{#if $PageData.data?.page}
+  <Page title={$PageData.data.page.title} content={$PageData.data.page.content}>
+    {#if pageInfo && pageInfo.images}
+      <Aside images={pageInfo.images} links={pageInfo.links} />
+    {/if}
+  </Page>
+{/if}
