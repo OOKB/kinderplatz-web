@@ -8,7 +8,7 @@
 
 <header>
   <nav id="mainMenu">
-    <ul class="flex justify-between">
+    <ul class="flex justify-between border-t border-orange text-center">
       {#each links as link}
         <Link {...link} />
       {/each}

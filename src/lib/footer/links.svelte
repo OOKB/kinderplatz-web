@@ -2,11 +2,11 @@
   import SubMenu from '$lib/el/sub-menu.svelte';
   import { pages } from '$lib/page-info.js'
 </script>
-<section class="">
+<section class="p-8">
   <nav>
     <ul class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-6 gap-4">
       <li class="sub">
-        <a class="darkgray" href="/index">KinderPlatz :: <br>
+        <a class="darkgray" href="/">KinderPlatz :: <br>
         Childcare &amp; Education Center </a>
       <br>
       <br>

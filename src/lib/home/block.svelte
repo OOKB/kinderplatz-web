@@ -5,24 +5,28 @@
   export let color = ''
   export let word = ''
   export let image = ''
-  const mediaServer = 'https://kinderplatz-api.pages.dev'
-  $: classStyle = classNames(color, { imgBlk: image })
+  export let alt = ''
+
+  const mediaServer = '' // 'https://kinderplatz-api.pages.dev'
+
+  $: showGrayText = color === 'orange' || color === 'white'
+  $: classStyle = classNames({
+    [`bg-${color}`]: color,
+    'bg-cover': image,
+    'text-natural-600': showGrayText,
+    'text-white': !showGrayText,
+    'font-bold': image,
+  })
 </script>
 
 <div
-  class="block flex-initial h-64 w-64 justify-center {classStyle}"
+  class="grid aspect-square h-full rounded-sm {classStyle}"
   style={image ? `background-image: url(${mediaServer}${image});` : ''}>
   {#if link}
-    <a href="{link}" class="text-gray-700">
-      <p>{word}</p>
+    <a href="{link}" class="flex items-center justify-center">
+      {word}
     </a>
   {:else}
-    <p>{word}</p>
+    <p class="flex justify-center items-center">{word}</p>
   {/if}
 </div>
-
-<style>
-  div.imgBlk {
-    background-size: cover;
-  }
-</style>

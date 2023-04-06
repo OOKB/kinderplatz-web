@@ -7,6 +7,7 @@
 <svelte:head>
 	<title>KinderPlatz Childcare & Education Center</title>
 </svelte:head>
+
 <TopBanner />
 <Header />
 <main>

@@ -1,4 +1,4 @@
-<div class="flex justify-center">
+<div class="flex justify-center logo-big">
 
   <svg class="w-6/12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/" viewBox=" 0 0 262.6 55.7">
 
@@ -81,5 +81,22 @@
       <path class="fill-stone-light" d="M262.6,47.5v2.8c-0.8,0-2.2,0.2-3,0.6v4.5h-3.1v-7.2l3.1-0.9v1.2C260.5,47.9,261.9,47.5,262.6,47.5z"></path>
     </g>
   </svg>
-
 </div>
+<style>
+  @media (min-width: 500px) {
+    .logo-big {
+      height: 33vh;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .logo-big {
+        height: 40vh;
+      }
+  }
+  @media (min-width: 1200px) {
+    .logo-big {
+      height: 45vh;
+    }
+  }
+</style>

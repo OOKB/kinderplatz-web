@@ -10,7 +10,7 @@
 </script>
 <div class="flex static h-20 {bgColor}">
   <Logo />
-  <h1 class="title z-0 absolute italic uppercase whitespace-nowrap tracking-tighter text-9xl">{title}</h1>
+  <h1 class="title z-0 absolute italic uppercase whitespace-nowrap tracking-tighter text-8xl">{title}</h1>
 </div>
 
 <!-- Probably convert this to tailwind css? -->
@@ -18,7 +18,7 @@
   h1.title {
     font-weight: 400;
     font-family: var(--font-stack-serif);
-    left: -2vw;
+    left: -1vw;
     transform: rotate(0.02turn);
   }
 </style>

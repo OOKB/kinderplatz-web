@@ -12,12 +12,24 @@ type Heading {
   url: String
 }
 
+type Image {
+  alt: String!
+  src: String!
+}
+
+type Link {
+  href: String!
+  name: String!
+}
+
 type Page {
   collection: String
   content: String
   headings: [Heading]
   id: ID!
+  images: [Image]
   info: FileInfo
+  links: [Link]
   slug: String
   title: String
 }
