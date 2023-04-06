@@ -6,7 +6,7 @@
 
 <li class="sub">
   <a class="darkgray" href={url}>{name}</a>
-  <ul class="subMenu list-reset">
+  <ul class="subMenu list-reset ml-6">
     {#each links as link}
       <li><a class="darkgray" href={link.href}>{link.name}</a></li>
     {/each}
