@@ -4,9 +4,9 @@
   export let links
 </script>
 
-<li class="sub">
+<li>
   <a class="darkgray" href={url}>{name}</a>
-  <ul class="subMenu list-reset ml-6">
+  <ul class="list-reset ml-6">
     {#each links as link}
       <li><a class="darkgray" href={link.href}>{link.name}</a></li>
     {/each}
