@@ -20,7 +20,21 @@
 </script>
 
 <div
-  class="grid aspect-square h-full rounded-sm {classStyle}"
+  class="
+    grid
+    aspect-square
+    w-[calc((100vw_/_6)_-_4px)]
+    h-[calc((100vw_/_6)_-_4px)]
+    border-[color:var(--kp-white)]
+    items-center
+    justify-center
+    overflow-hidden
+    box-border
+    border-2
+    border-white
+    border-t-0
+    {classStyle}
+    "
   style={image ? `background-image: url(${mediaServer}${image});` : ''}>
   {#if link}
     <a href="{link}" class="flex items-center justify-center">
@@ -30,3 +44,10 @@
     <p class="flex justify-center items-center">{word}</p>
   {/if}
 </div>
+
+<style>
+ .block {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  }
+</style>
