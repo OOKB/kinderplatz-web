@@ -6,3 +6,11 @@
     </g>
   </svg>
 </div>
+
+<!-- Probably convert this to tailwind css? -->
+<!-- or have some way to pass this down into here from the parent incase it changes sometimes? -->
+<style>
+  g {
+    fill: white;
+  }
+</style>
