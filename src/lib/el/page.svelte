@@ -1,16 +1,21 @@
 <script>
   import LogoBanner from "$lib/el/logo-banner.svelte";
   import SvelteMarkdown from 'svelte-markdown'
+  import { page } from '$app/stores';
 
   export let title = ''
   export let content = ''
+  export let sectionColor = ''
+
+  $: sectionColor = $page.params.sectionColor;
+  $: bgColor = `bg-${sectionColor}-100`
 </script>
 
 <LogoBanner {title} />
-<div class="flex">
+<div class="flex mb-12">
   <slot />
   <!-- how to set a lighter background color that matches section color for the article's BG? -->
-  <article class="flex-[5] mr-8 pt-10 pb-20 px-10">
+  <article class="flex-[5] mr-8 pt-10 pb-20 px-10 {bgColor}">
     <section>
       <SvelteMarkdown source={content} />
     </section>
