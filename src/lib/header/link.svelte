@@ -8,10 +8,9 @@
 
   $: active = url === $page.url.pathname
   $: textColor = active ? 'text-slate-50' : `text-${sectionColor}`
-  $: background = active ? `bg-${sectionColor}` : ''
   $: border = active ? '' : 'border-b border-orange'
-
-  hoverState = `hover:bg-${sectionColor}`
+  $: background = active ? `bg-${sectionColor}` : ''
+  $: hoverState = `hover:bg-${sectionColor}`
 </script>
 
 <li class="flex-1 {background} {border}">
