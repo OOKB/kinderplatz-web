@@ -1,3 +1,4 @@
+const _ = require('lodash/fp')
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
@@ -111,6 +112,13 @@ const fuchsia = {
 fuchsia.DEFAULT = fuchsia['600']
 fuchsia.dark = fuchsia['900']
 
+const colorIds = ['sky', 'orange', 'lime', 'fuchsia', 'yellow', 'red', 'pink']
+const safeList = _.flatten(
+  ['text', 'bg'].map((prefix) => colorIds.map((id) => `${prefix}-${id}`)).concat(
+    ['100'].map((suffix) => colorIds.map((id) => `bg-${id}-${suffix}`))
+  )
+)
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -155,19 +163,6 @@ module.exports = {
   plugins: [],
   // Color styles that are used dynamically and not hardcoded in the theme.
   safelist: [
-    'text-sky',
-    'text-orange',
-    'text-lime',
-    'text-fuchsia',
-    'text-yellow',
-    'text-red',
-    'text-pink',
-    'bg-sky',
-    'bg-orange',
-    'bg-lime',
-    'bg-fuchsia',
-    'bg-yellow',
-    'bg-red',
-    'bg-pink',
+    ...safeList,
   ],
 }

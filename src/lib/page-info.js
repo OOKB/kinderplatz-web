@@ -8,9 +8,7 @@ export const pages = {
     url: '/agegroups',
     name: 'Age Groups',
     sectionColor: 'lime',
-    links: [
-
-    ],
+    links: [],
   },
   ['ageGroups/immersion']: {
 
@@ -18,7 +16,7 @@ export const pages = {
   approach: {
     slug: 'approach',
     url: '/approach',
-    name: 'Approach',
+    name: 'Our Approach',
     sectionColor: 'yellow',
   },
   contact: {

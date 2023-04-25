@@ -1,8 +1,10 @@
 <script>
   import _ from 'lodash/fp.js'
+  import { pageColor } from '$lib/stores.js'
+
   export let images = []
   export let links = []
-  export let color = ""
+
   function getSrc(image) {
     return image.src.replace('/images/', '/images/w450/')
   }
@@ -18,11 +20,11 @@
     </div>
   {/if}
   {#if links && links.length}
-    <h2>Section Contents</h2>
+    <h2 class="font-bold text-xl my-6">Section Contents</h2>
     <section>
       <ul class="">
         {#each links as {href, name}}
-          <li><a class={color} href={href}>{name}</a></li>
+          <li><a class="text-{$pageColor}" href={href}>{name}</a></li>
         {/each}
       </ul>
     </section>

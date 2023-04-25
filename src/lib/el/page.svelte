@@ -1,16 +1,14 @@
 <script>
   import LogoBanner from "$lib/el/logo-banner.svelte";
   import SvelteMarkdown from 'svelte-markdown'
-  import { page } from '$app/stores';
-  import { getSlugColor } from '$lib/meta.js'
+  import { pageColor } from '$lib/stores.js';
 
   export let title = ''
   export let content = ''
-  export let sectionColor = ''
-  export let slug = ''
+  // export let sectionColor = ''
+  // export let slug = ''
 
-  $: bgColor = getSlugColor($page.params.slug, $page.route.id)
-  $: lightBg = `${bgColor}-100`
+  $: lightBg = `bg-${$pageColor}-100`
 </script>
 
 <LogoBanner {title} />
