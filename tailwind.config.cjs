@@ -116,11 +116,11 @@ const amber = {
 const yellow = {
   ...colors.yellow,
   '100': 'rgba(225,190,000,.2)', // kp-yellow-20p
-  '400': 'rgba(225,190,000,.85)', // kp-yellow-85p
-  '500': 'rgba(225,190,000,1)', // kp-yellow '#e1be00'
+  '500': 'rgba(225,190,000,.85)', // kp-yellow '#e1be00'
+  '600': 'rgba(225,190,000,1)', // kp-yellow '#e1be00'
   '800': 'rgba(120,100,060,1)', // kp-gold
 }
-yellow.DEFAULT = yellow['500']
+yellow.DEFAULT = yellow['600']
 
 const lime = {
   ...colors.lime,

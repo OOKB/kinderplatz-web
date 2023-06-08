@@ -1,5 +1,5 @@
 <div class="flex accredation">
-  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 43.8 98.4" style="enable-background:new 0 0 43.8 98.4;" xml:space="preserve">
+  <svg class="min-w-[1em] max-w-[2em] mr-[1em]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 43.8 98.4" style="enable-background:new 0 0 43.8 98.4; fill: rgb(96, 103, 103);" xml:space="preserve">
     <g>
       <path d="M31.6,38.9c-0.1-1-0.2-2-0.6-3c-0.2-0.5-0.4-0.9-0.5-1.1l-0.2-0.3c-0.5-0.9-1.8-0.7-2,0.3c-0.2,1.1-1.1,1.9-2.2,1.9
         c-0.8,0-1.6-0.4-2-1.2l-3.8-6.9c-0.9-1.6-3.4-1.6-4.1,0.2l-2.6,5.5l-0.3,0.5c-0.2,0.3-0.4,0.7-0.5,1.1C12.3,37,12,38.2,12,39.5

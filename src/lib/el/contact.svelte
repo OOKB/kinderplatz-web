@@ -1,5 +1,5 @@
 <div>
-  <h2>Contact</h2>
+  <h2 class="text-xl	font-semibold	mb-2">Contact</h2>
   <p>
     Telephone: (612) 725-3481 <br>
     <em>Urgent: Barb Hamilton (612) 599-9178</em> <br>

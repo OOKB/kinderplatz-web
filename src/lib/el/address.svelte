@@ -1,5 +1,5 @@
 <div>
-  <h2>Address</h2>
+  <h2 class="text-xl font-semibold	mb-2">Address</h2>
   <address>
       Norman Pointe II <br>
       5600 American Boulevard West <br>
