@@ -13,6 +13,50 @@ const colors = require('tailwindcss/colors')
 //   'fuchsia', 'pink', 'rose',
 // ]
 
+/* color modules */
+/*
+  --kp-pink:       rgba(204,102,153,1);
+  --kp-pink-85p:   rgba(204,102,153,.85);
+  --kp-pink-20p:   rgba(204,102,153,.2);
+
+  --kp-lightgray:  rgb(169, 169, 155);
+  --kp-gray:       rgba(132,132,120,1);
+  --kp-darkgray:   rgba(096,103,103,1);
+
+  --kp-red:        rgba(255,000,000,1);
+  --kp-red-80p:    rgba(255,000,000,.8);
+  --kp-red-15p:    rgba(255,000,000,.15);
+
+  --kp-orange:     rgba(255,102,000,1);
+  --kp-orange-80p: rgba(255,102,000,.8);
+  --kp-orange-15p: rgba(255,102,000,.15);
+  --kb-darkorange: rgba(128,051,000,1);
+
+  --kp-yellow:     rgba(225,190,000,1);
+  --kp-yellow-85p: rgba(225,190,000,.85);
+  --kp-yellow-20p: rgba(225,190,000,.2);
+  --kp-gold:       rgba(120,100,060,1);
+
+  --kp-lightgreen: rgba(203,255,050,1);
+  --kp-green:      rgba(010,180,060,1);
+  --kp-green-80p:  rgba(010,180,060,.8);
+  --kp-green-15p:  rgba(010,180,060,.15);
+
+  --kp-blue:       rgba(030,120,200,1);
+  --kp-blue-80p:   rgba(030,120,200,.8);
+  --kp-blue-15p:   rgba(030,120,200,.15);
+  --kp-darkblue:   rgba(010,040,066,1);
+
+  --kp-purple:     rgba(200,100,200,1);
+  --kp-purple-80p: rgba(200,100,200,.8);
+  --kp-purple-15p: rgba(200,100,200,.15);
+  --kp-darkpurple: rgba(100,050,100,1);
+
+  --kp-brown:      rgba(047,041,038,1);
+  --kp-black:      rgba(010,000,000,1);
+  --kp-white:      rgba(255,250,250,1);
+*/
+
 // 'pink': ,
 const pink = {
   ...colors.pink,
@@ -80,17 +124,13 @@ yellow.DEFAULT = yellow['500']
 
 const lime = {
   ...colors.lime,
+  '100': 'rgba(010,180,060,.15)', // --kp-green-15p
   '300': 'rgba(203,255,050,1)', // kp-lightgreen
   '500': 'rgba(010,180,060,.8)', // --kp-green-80p
   '600': 'rgba(010,180,060,1)', // kp-green
 }
 lime.light = lime['300']
 lime.DEFAULT = lime['600']
-
-const green = {
-  ...colors.green,
-  '100': 'rgba(010,180,060,.15)', // --kp-green-15p
-}
 
 const sky = {
   ...colors.sky,
@@ -138,7 +178,6 @@ module.exports = {
       orange,
       yellow,
       lime,
-      green,
       sky,
       fuchsia,
       // 'gold': '#78643c',
