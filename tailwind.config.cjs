@@ -154,7 +154,7 @@ fuchsia.dark = fuchsia['900']
 
 const colorIds = ['sky', 'orange', 'lime', 'fuchsia', 'yellow', 'red', 'pink']
 const safeList = _.flatten(
-  ['text', 'bg'].map((prefix) => colorIds.map((id) => `${prefix}-${id}`)).concat(
+  ['text', 'hover:text', 'bg', 'hover:bg'].map((prefix) => colorIds.map((id) => `${prefix}-${id}`)).concat(
     ['100'].map((suffix) => colorIds.map((id) => `bg-${id}-${suffix}`))
   )
 )
@@ -202,6 +202,7 @@ module.exports = {
   plugins: [],
   // Color styles that are used dynamically and not hardcoded in the theme.
   safelist: [
+    'backgroundColor',
     ...safeList,
   ],
 }
