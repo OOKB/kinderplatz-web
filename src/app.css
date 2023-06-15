@@ -14,8 +14,6 @@ article h2 {
 }
 article p {
   font-family: var(--font-stack-serif);
-  font-size: 1.125rem;
-  line-height: 1.5;
   margin-bottom: 1em;
 }
 
@@ -145,3 +143,118 @@ address {
 }
 
 /** /end main nav stuff **/
+
+
+
+
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+main .contents {
+  @apply flex-col;
+}
+.contents aside {
+  @apply bg-[color:var(--kp-white)] relative p-[1em];
+}
+
+article section.flex {
+  @apply flex-col;
+}
+.contents aside .image-block {
+  @apply relative h-0 mr-[-2em] ml-[-2em] mt-[2em] mb-[1em] pb-[calc(100%_+_4em)] before:content-[""] before:block before:absolute before:transition-all before:duration-[0.3s] before:ease-linear before:z-[2] before:inset-0;
+  background: var(--kp-white);
+}
+.contents aside .image-block.top {
+  @apply mt-[-2em];
+}
+.contents aside .image-block img {
+  @apply relative w-full h-auto border-[color:var(--kp-white)] z-[1] border-[0.1rem] border-solid;
+}
+.contents aside .image-block:before {
+  background: transparent;
+}
+.intro .contents aside .image-block:before {
+  @apply bg-[color:var(--kp-orange-15p)];
+}
+.credentials .contents aside .image-block:before {
+  @apply bg-[color:var(--kp-purple-15p)];
+}
+.contact .contents aside .image-block:before {
+  @apply bg-[color:var(--kp-red-15p)];
+}
+.approach .contents aside .image-block:before {
+  @apply bg-[color:var(--kp-yellow-20p)];
+}
+.tuition .contents aside .image-block:before {
+  @apply bg-[color:var(--kp-blue-15p)];
+}
+.other .contents aside .image-block:before {
+  @apply bg-[color:var(--kp-pink-20p)];
+}
+.ageGroup .contents aside .image-block:before {
+  @apply bg-[color:var(--kp-green-15p)];
+}
+
+/** main text area **/
+article .lead {
+  @apply text-[1.25em];
+}
+
+/* addendum logos on credentials */
+.img-group {
+  @apply border-b-[color:var(--kp-purple)] border-t-[color:var(--kp-purple)] mb-[2em] pt-[1em] pb-[0.5em] border-b border-solid border-t;
+}
+.img-group a {
+  @apply block max-w-[250px] min-w-[150px] mr-[3em];
+}
+.img-group a img {
+  @apply max-w-full;
+}
+/***********************************/
+@media (max-width: 799px) {
+
+  .contents aside .image-block {
+    @apply relative h-auto w-6/12 order-1 bg-transparent m-0 pb-0 before:content-[""] before:hidden;
+  }
+  .contents aside .image-block.top {
+    @apply mt-0;
+  }
+  .contents aside .image-block img {
+    @apply relative w-full h-auto z-[1] border-[none];
+  }
+  .contents aside h2,
+  .contents aside section {
+    @apply w-full order-2;
+  }
+}
+@media (min-width: 800px) {
+
+  .gallery article {
+    @apply mx-4;
+  }
+  article section.flex {
+    @apply flex-row flex-wrap;
+  }
+  article section.flex > div {
+    @apply flex-[auto] w-6/12;
+  }
+}
+@media (min-width: 1100px) {
+
+  .gallery article {
+    @apply mx-8;
+  }
+}
+@media (min-width: 1400px) {
+
+  .gallery article {
+    @apply mx-16;
+  }
+  article section.flex > div {
+    @apply flex-1 w-auto;
+  }
+}
+
+
