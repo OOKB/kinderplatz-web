@@ -145,3 +145,32 @@ address {
 }
 
 /** /end main nav stuff **/
+
+/** Footer Additions **/
+/* footer stuff */
+
+.intro footer .flex {
+  @apply border-[color:var(--kp-orange)];
+}
+.approach footer .flex {
+  @apply border-[color:var(--kp-yellow)];
+}
+.ageGroup footer .flex {
+  @apply border-[color:var(--kp-green)];
+}
+.tuition footer .flex {
+  @apply border-[color:var(--kp-blue)];
+}
+.credentials footer .flex {
+  @apply border-[color:var(--kp-purple)];
+}
+.contact footer .flex {
+  @apply border-[color:var(--kp-red)];
+}
+.other footer .flex {
+  @apply border-[color:var(--kp-pink)];
+}
+
+footer nav > ul > li {
+  @apply flex-[auto] p-5;
+}

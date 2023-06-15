@@ -5,12 +5,12 @@
   $: linkClasses = "hover:text-natural-700 hover:underline hover:decoration-solid";
 
 </script>
-<section class="p-8 footer-links">
+<section class="">
   <div class="hidden">
     <a class="hover:text-natural-700 hover:underline hover:decoration-solid"></a>
   </div>
   <nav>
-    <ul class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-6 gap-4">
+    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 ">
       <li>
         <a class={linkClasses} href="/">KinderPlatz :: <br>
         Childcare &amp; Education Center </a>
