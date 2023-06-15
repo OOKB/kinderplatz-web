@@ -5,7 +5,7 @@
   $: linkClasses = "hover:text-natural-700 hover:underline hover:decoration-solid";
 
 </script>
-<section class="">
+<section class="p-5 lg:p-6 xl:p-8">
   <div class="hidden">
     <a class="hover:text-natural-700 hover:underline hover:decoration-solid"></a>
   </div>
