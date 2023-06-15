@@ -24,6 +24,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   font-family: sans-serif;
+  margin-bottom: 1.5em;
 }
 
 tr {
