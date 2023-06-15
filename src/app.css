@@ -106,5 +106,33 @@ td::before {
     margin-right: auto;
     padding-right: 1em;
   }
+}
 
+/** blockquote styles for testimonails page **/
+blockquote {
+  border-left: .25em solid rgba(204,102,153,1);
+  margin-left: 0;
+  margin-bottom: 2em;
+  padding-left: 1em;
+  font-family: var(--font-stack-serif);
+  position: relative;
+  display: block;
+  z-index: 2;
+}
+/* Blockquote right double quotes */
+blockquote:after {
+  position: absolute;
+  content: "”";
+  font-size: 30rem;
+  line-height: 0;
+  bottom: -2rem;
+  right: 4rem;
+  z-index: -1;
+  opacity: .15;
+  font-family: var(--font-stack-sans);
+}
+
+/** style address plain, no italics **/
+address {
+  font-style: normal;
 }
