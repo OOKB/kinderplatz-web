@@ -144,10 +144,4 @@ address {
   }
 }
 
-@media (min-width: 768px) {
-  #mainMenu ul li:nth-child(3n) {
-    border-right: none;
-  }
-}
-
 /** /end main nav stuff **/
