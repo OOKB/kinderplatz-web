@@ -136,3 +136,18 @@ blockquote:after {
 address {
   font-style: normal;
 }
+/* custom nav addition */
+/* medium widths? */
+@media (min-width: 768px) {
+  #mainMenu ul li:nth-child(3n) {
+    border-right: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #mainMenu ul li:nth-child(3n) {
+    border-right: none;
+  }
+}
+
+/** /end main nav stuff **/
