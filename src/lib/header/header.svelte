@@ -1,5 +1,4 @@
 <script>
-  import { pages } from '$lib/page-info.js'
   import Link from './link.svelte'
   export let links = []
 </script>

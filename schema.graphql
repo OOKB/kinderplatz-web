@@ -39,5 +39,6 @@ type Section {
   images: [Image]
   links: [Page]
   page: Page
+  pages: [Page]
   sectionColor: String
 }

@@ -1,23 +1,27 @@
 query PageData($slug: ID!) {
-  page(id: $slug, isSlug: true) {
-    id
-    title
-    content
-    slug
-    headings {
-      id
-      title
-    }
-    section {
-      id
-      images {
-        alt
-        src
-      }
-      links {
-        slug
-        title
-      }
-    }
-  }
+	page(id: $slug, isSlug: true) {
+		id
+		title
+		content
+		slug
+		headings {
+			id
+			title
+		}
+		section {
+			id
+			images {
+				alt
+				src
+			}
+			pages {
+				slug
+				title
+			}
+			links {
+				slug
+				title
+			}
+		}
+	}
 }

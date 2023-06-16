@@ -1,9 +1,12 @@
 <script>
   import _ from 'lodash/fp.js'
   import { pageColor } from '$lib/stores.js'
+  import Link from './link.svelte'
 
   export let images = []
-  export let links = []
+  export let headings = [] // heading values on this page
+  export let pages = [] // pages in this section
+  export let links = [] // related links
 
   function getSrc(image) {
     return image.src.replace('/images/', '/images/w450/')
@@ -25,23 +28,45 @@
       />
     </div>
   {/if}
-  {#if links && links.length}
+  {#if headings && headings.length > 1}
+    <h2 class="font-bold text-xl my-6">Page Contents</h2>
+    <section>
+      <ul class="">
+        {#each headings as {id, title}}
+          <li><a class="text-{$pageColor}" href="#{id}">{title}</a></li>
+        {/each}
+      </ul>
+    </section>
+  {/if}
+  {#if pages && pages.length}
     <h2 class="font-bold text-xl my-6">Section Contents</h2>
     <section>
       <ul class="">
-        {#each links as {href, name}}
-          <li><a class="text-{$pageColor}" href={href}>{name}</a></li>
+        {#each pages as {slug, title}}
+          <Link {pageColor} {slug} {title} />
+        {/each}
+      </ul>
+    </section>
+  {/if}
+  {#if links && links.length}
+    <h2 class="font-bold text-xl my-6">Related</h2>
+    <section>
+      <ul class="">
+        {#each links as {title, slug}}
+          <Link {pageColor} {slug} {title} />
         {/each}
       </ul>
     </section>
   {/if}
   {#if images && _.get('[1].src', images)}
-    <div class="">
-      <img
-        src="{getSrc(images[1])}"
-        alt="{images[1].alt}"
-      />
-    </div>
+    {#each images.slice(1) as image}
+      <div class="">
+        <img
+          src="{getSrc(image)}"
+          alt="{image.alt}"
+        />
+      </div>
+    {/each}
   {/if}
 </aside>
 

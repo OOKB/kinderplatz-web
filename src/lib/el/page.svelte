@@ -1,21 +1,23 @@
 <script>
-  import LogoBanner from "$lib/el/logo-banner.svelte";
+  import { getContext } from 'svelte';
   import SvelteMarkdown from 'svelte-markdown'
+  import LogoBanner from "$lib/el/logo-banner.svelte";
   import { pageColor } from '$lib/stores.js';
 
   export let title = ''
   export let content = ''
-
-  $: lightBg = `bg-${$pageColor}-100`
-  $: sectionClasses = `max-w-2xl text-xl leading-[1.618] md:max-w-4xl md:text-lg md:leading-normal`
+  let section = getContext('section')
+  $: lightBg = `bg-${$section.sectionColor}-100`
+  const sectionClasses = `max-w-2xl text-xl leading-[1.618] md:max-w-4xl md:text-lg md:leading-normal`
 </script>
 
-<LogoBanner {title} />
+<LogoBanner {title} pageColor={$section.sectionColor} />
 
 <div class="flex mb-12 flex-col md:flex-row">
   <slot />
 
   <article
+    id="article-content"
     class="
       pt-4 pb-12 px-4 {lightBg}
       md:flex-[2] md:mr-0 md:pt-6 md:pb-20 md:px-8

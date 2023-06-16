@@ -1,6 +1,5 @@
 <script>
   import SubMenu from '$lib/el/sub-menu.svelte';
-  // import { pages } from '$lib/page-info.js'
 
   $: linkClasses = "hover:text-natural-700 hover:underline hover:decoration-solid";
 
