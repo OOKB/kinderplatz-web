@@ -13,23 +13,17 @@ type Heading {
 }
 
 type Image {
-  alt: String!
+  alt: String
   src: String!
 }
 
-type Link {
-  href: String!
-  name: String!
-}
-
 type Page {
-  collection: String
   content: String
   headings: [Heading]
   id: ID!
   images: [Image]
   info: FileInfo
-  links: [Link]
+  section: Section
   slug: String
   title: String
 }
@@ -37,4 +31,13 @@ type Page {
 type Query {
   page(id: ID!, isSlug: Boolean): Page
   pages: [Page]
+  sections(menuItemsOnly: Boolean): [Section]
+}
+
+type Section {
+  id: ID!
+  images: [Image]
+  links: [Page]
+  page: Page
+  sectionColor: String
 }
