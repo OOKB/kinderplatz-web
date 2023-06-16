@@ -11,7 +11,7 @@
 </script>
 
 <aside class="flex-2 relative top-[-3em] p-8">
-  {#if _.get('[0].src', images)}
+  {#if images && _.get('[0].src', images)}
     <div class="">
       <img
         src="{getSrc(images[0])}"
@@ -29,7 +29,7 @@
       </ul>
     </section>
   {/if}
-  {#if _.get('[1].src', images)}
+  {#if images && _.get('[1].src', images)}
     <div class="">
       <img
         src="{getSrc(images[1])}"
