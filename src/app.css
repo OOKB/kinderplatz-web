@@ -14,7 +14,247 @@ article h2 {
 }
 article p {
   font-family: var(--font-stack-serif);
-  font-size: 1.125rem;
-  line-height: 1.5;
   margin-bottom: 1em;
 }
+
+/** Responsive Table Styling!? */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: sans-serif;
+  margin-bottom: 1.5em;
+}
+
+tr {
+  border-bottom: 1px solid black;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.33em 0.5em;
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+thead tr:first-child {
+  background-color: rgba(255,250,250,1);
+}
+
+td::before {
+  display: none;
+}
+
+/* hack for simple vertical table layout on skinny screens */
+@media screen and (max-width: 1000px) {
+  tr:nth-child(odd)    { background-color: transparent; }
+  tr:nth-child(even)   { background-color: transparent; }
+  thead tr:first-child { background-color: transparent; }
+
+  table {
+    border: 0;
+    display: block;
+    box-shadow: none;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody {
+    display: block;
+    width: 100%;
+  }
+
+  tr {
+    border-top: 2px solid;
+    display: block;
+  }
+
+  td {
+    border-bottom: 1px solid #3c3c3b;
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  }
+
+  td:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  td:nth-child(even) {
+    background-color: rgba(255,250,250,1);
+  }
+
+  td:first-child {
+    background-color: transparent;
+    padding-top: .75em;
+    font-weight: bold;
+    flex-wrap: wrap;
+  }
+
+  td::before {
+    display: inline-block;
+    margin-right: auto;
+    padding-right: 1em;
+  }
+}
+
+/** blockquote styles for testimonails page **/
+blockquote {
+  border-left: .25em solid rgba(204,102,153,1);
+  margin-left: 0;
+  margin-bottom: 2em;
+  padding-left: 1em;
+  font-family: var(--font-stack-serif);
+  position: relative;
+  display: block;
+  z-index: 2;
+}
+/* Blockquote right double quotes */
+blockquote:after {
+  position: absolute;
+  content: "”";
+  font-size: 30rem;
+  line-height: 0;
+  bottom: -2rem;
+  right: 4rem;
+  z-index: -1;
+  opacity: .15;
+  font-family: var(--font-stack-sans);
+}
+
+/** style address plain, no italics **/
+address {
+  font-style: normal;
+}
+/* custom nav addition */
+/* medium widths? */
+@media (min-width: 768px) {
+  #mainMenu ul li:nth-child(3n) {
+    border-right: none;
+  }
+}
+
+/** /end main nav stuff **/
+
+
+
+
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+main .contents {
+  @apply flex-col;
+}
+.contents aside {
+  @apply bg-[color:var(--kp-white)] relative p-[1em];
+}
+
+article section.flex {
+  @apply flex-col;
+}
+.contents aside .image-block {
+  @apply relative h-0 mr-[-2em] ml-[-2em] mt-[2em] mb-[1em] pb-[calc(100%_+_4em)] before:content-[""] before:block before:absolute before:transition-all before:duration-[0.3s] before:ease-linear before:z-[2] before:inset-0;
+  background: var(--kp-white);
+}
+.contents aside .image-block.top {
+  @apply mt-[-2em];
+}
+.contents aside .image-block img {
+  @apply relative w-full h-auto border-[color:var(--kp-white)] z-[1] border-[0.1rem] border-solid;
+}
+.contents aside .image-block:before {
+  background: transparent;
+}
+.intro .contents aside .image-block:before {
+  @apply bg-[color:var(--kp-orange-15p)];
+}
+.credentials .contents aside .image-block:before {
+  @apply bg-[color:var(--kp-purple-15p)];
+}
+.contact .contents aside .image-block:before {
+  @apply bg-[color:var(--kp-red-15p)];
+}
+.approach .contents aside .image-block:before {
+  @apply bg-[color:var(--kp-yellow-20p)];
+}
+.tuition .contents aside .image-block:before {
+  @apply bg-[color:var(--kp-blue-15p)];
+}
+.other .contents aside .image-block:before {
+  @apply bg-[color:var(--kp-pink-20p)];
+}
+.ageGroup .contents aside .image-block:before {
+  @apply bg-[color:var(--kp-green-15p)];
+}
+
+/** main text area **/
+article .lead {
+  @apply text-[1.25em];
+}
+
+/* addendum logos on credentials */
+.img-group {
+  @apply border-b-[color:var(--kp-purple)] border-t-[color:var(--kp-purple)] mb-[2em] pt-[1em] pb-[0.5em] border-b border-solid border-t;
+}
+.img-group a {
+  @apply block max-w-[250px] min-w-[150px] mr-[3em];
+}
+.img-group a img {
+  @apply max-w-full;
+}
+/***********************************/
+@media (max-width: 799px) {
+
+  .contents aside .image-block {
+    @apply relative h-auto w-6/12 order-1 bg-transparent m-0 pb-0 before:content-[""] before:hidden;
+  }
+  .contents aside .image-block.top {
+    @apply mt-0;
+  }
+  .contents aside .image-block img {
+    @apply relative w-full h-auto z-[1] border-[none];
+  }
+  .contents aside h2,
+  .contents aside section {
+    @apply w-full order-2;
+  }
+}
+@media (min-width: 800px) {
+
+  .gallery article {
+    @apply mx-4;
+  }
+  article section.flex {
+    @apply flex-row flex-wrap;
+  }
+  article section.flex > div {
+    @apply flex-[auto] w-6/12;
+  }
+}
+@media (min-width: 1100px) {
+
+  .gallery article {
+    @apply mx-8;
+  }
+}
+@media (min-width: 1400px) {
+
+  .gallery article {
+    @apply mx-16;
+  }
+  article section.flex > div {
+    @apply flex-1 w-auto;
+  }
+}
+
+

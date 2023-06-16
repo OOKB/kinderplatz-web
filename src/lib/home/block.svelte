@@ -21,13 +21,7 @@
 
 <div
   class="
-    grid
     aspect-square
-    w-[calc((100vw_/_6)_-_4px)]
-    h-[calc((100vw_/_6)_-_4px)]
-    border-[color:var(--kp-white)]
-    items-center
-    justify-center
     overflow-hidden
     box-border
     border-2
@@ -37,11 +31,11 @@
     "
   style={image ? `background-image: url(${mediaServer}${image});` : ''}>
   {#if link}
-    <a href="{link}" class="flex items-center justify-center">
+    <a href="{link}" class="flex h-full w-full items-center justify-center">
       {word}
     </a>
   {:else}
-    <p class="flex justify-center items-center">{word}</p>
+    <p class="flex h-full w-full items-center justify-center">{word}</p>
   {/if}
 </div>
 

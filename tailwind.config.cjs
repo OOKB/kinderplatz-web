@@ -84,6 +84,7 @@ const natural = {
   '400': 'rgba(096,103,103,.6)',
   '500': 'rgba(096,103,103,.8)',
   '600': 'rgba(096,103,103,1)', // 'darkgray': '#606767',
+  '700': 'rgba(076,83,83,1)',
 }
 natural.dark = natural['600']
 
@@ -154,7 +155,7 @@ fuchsia.dark = fuchsia['900']
 
 const colorIds = ['sky', 'orange', 'lime', 'fuchsia', 'yellow', 'red', 'pink']
 const safeList = _.flatten(
-  ['text', 'bg'].map((prefix) => colorIds.map((id) => `${prefix}-${id}`)).concat(
+  ['text', 'hover:text', 'bg', 'hover:bg', 'border'].map((prefix) => colorIds.map((id) => `${prefix}-${id}`)).concat(
     ['100'].map((suffix) => colorIds.map((id) => `bg-${id}-${suffix}`))
   )
 )
@@ -202,6 +203,7 @@ module.exports = {
   plugins: [],
   // Color styles that are used dynamically and not hardcoded in the theme.
   safelist: [
+    'backgroundColor',
     ...safeList,
   ],
 }

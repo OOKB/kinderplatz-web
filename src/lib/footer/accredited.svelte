@@ -1,4 +1,4 @@
-<div class="flex accredation">
+<div class="accredation flex items-start md:items-center lg:items-start p-5 lg:p-6 xl:p-8 md:col-span-3 lg:col-span-1">
   <svg class="min-w-[1em] max-w-[2em] mr-[1em]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 43.8 98.4" style="enable-background:new 0 0 43.8 98.4; fill: rgb(96, 103, 103);" xml:space="preserve">
     <g>
       <path d="M31.6,38.9c-0.1-1-0.2-2-0.6-3c-0.2-0.5-0.4-0.9-0.5-1.1l-0.2-0.3c-0.5-0.9-1.8-0.7-2,0.3c-0.2,1.1-1.1,1.9-2.2,1.9

@@ -10,8 +10,14 @@
   }
 </script>
 
-<aside class="flex-2 relative top-[-3em] p-8">
-  {#if images && _.get('[0].src', images)}
+<aside
+  class="
+    order-2 flex flex-wrap
+    md:order-[initial] md:flex-1 md:top[-3em] md:block md:p-8
+    lg:flex-[2]
+    xl:flex-1
+  ">
+  {#if _.get('[0].src', images)}
     <div class="">
       <img
         src="{getSrc(images[0])}"
