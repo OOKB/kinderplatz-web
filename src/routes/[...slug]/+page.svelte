@@ -9,10 +9,11 @@
 
 {#if $PageData.data?.page}
   <Page title={$PageData.data.page.title} content={$PageData.data.page.content}>
-    {#if $PageData.data.page.images}
+    {#if $PageData.data.page.section}
       <Aside
-        images={$PageData.data.page.images}
-        links={$PageData.data.page.links}
+        headings={$PageData.data.page.headings}
+        images={$PageData.data.page.section.images}
+        links={$PageData.data.page.section.links}
       />
     {/if}
   </Page>

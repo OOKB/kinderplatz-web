@@ -1,9 +1,7 @@
 <script>
   import { pages } from '$lib/page-info.js'
   import Link from './link.svelte'
-  const links = [
-    'introduction', 'approach', 'agegroups', 'tuition', 'credentials', 'contact',
-  ].map((slug) => pages[slug])
+  export let links = []
 </script>
 
 <header>

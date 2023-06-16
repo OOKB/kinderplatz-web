@@ -3,13 +3,21 @@ query PageData($slug: ID!) {
     id
     title
     content
-    images {
-      alt
-      src
+    slug
+    headings {
+      id
+      title
     }
-    links {
-      name
-      href
+    section {
+      id
+      images {
+        alt
+        src
+      }
+      links {
+        slug
+        title
+      }
     }
   }
 }

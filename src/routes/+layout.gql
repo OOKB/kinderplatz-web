@@ -1,0 +1,9 @@
+query Sections {
+	sections(menuItemsOnly: true) {
+		sectionColor
+		page {
+			title
+			slug
+		}
+	}
+}

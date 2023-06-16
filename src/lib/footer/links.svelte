@@ -1,6 +1,6 @@
 <script>
   import SubMenu from '$lib/el/sub-menu.svelte';
-  import { pages } from '$lib/page-info.js'
+  // import { pages } from '$lib/page-info.js'
 </script>
 <section class="p-8 footer-links">
   <nav>
@@ -63,9 +63,9 @@
           <li><a class="darkgray" href="/gallery/">Kinderplatz Photos</a></li>
         </ul>
       </li>
-      <SubMenu {...pages.tuition} />
+      <!-- <SubMenu {...pages.tuition} />
       <SubMenu {...pages.credentials} />
-      <SubMenu {...pages.contact} />
+      <SubMenu {...pages.contact} /> -->
     </ul>
   </nav>
 </section>
