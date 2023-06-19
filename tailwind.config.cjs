@@ -156,7 +156,7 @@ fuchsia.dark = fuchsia['900']
 const colorIds = ['sky', 'orange', 'lime', 'fuchsia', 'yellow', 'red', 'pink']
 const safeList = _.flatten(
   ['text', 'hover:text', 'bg', 'hover:bg', 'border'].map((prefix) => colorIds.map((id) => `${prefix}-${id}`)).concat(
-    ['100'].map((suffix) => colorIds.map((id) => `bg-${id}-${suffix}`))
+    ['100', '500'].map((suffix) => colorIds.map((id) => `bg-${id}-${suffix}`))
   )
 )
 
