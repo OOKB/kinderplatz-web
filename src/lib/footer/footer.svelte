@@ -1,5 +1,4 @@
 <script>
-  import { pageColor } from '$lib/stores.js';
 
   import Address from "$lib/el/address.svelte";
 	import Stripe from "$lib/el/stripe.svelte";
@@ -9,7 +8,8 @@
   import Links from "./links.svelte";
 	import Block from "./block.svelte";
 
-  $: borderColor = `border-${$pageColor}`;
+  export let pageColor = ''
+  $: borderColor = `border-${pageColor}`;
 
 </script>
 

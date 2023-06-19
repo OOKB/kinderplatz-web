@@ -164,6 +164,10 @@ const safeList = _.flatten(
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
+    borderWidth: {
+      ...defaultTheme.borderWidth,
+      '9': '3em',
+    },
     colors: {
       ...colors, // Add default colors.
       // Define straight up colors that have no variations like black and white.

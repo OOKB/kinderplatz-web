@@ -21,6 +21,6 @@ export async function load(event) {
   const sections = get(Sections).data.sections
   const links = sections.map(getLink)
   const sectionId = getSectionId(event)
-  const sectionInfo = sections?.find(_.matches({ id: sectionId }))
+  const sectionInfo = sections?.find(_.matches({ id: sectionId })) || { sectionColor: 'red' }
   return { links, sectionId, sectionInfo };
 }

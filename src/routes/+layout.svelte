@@ -23,4 +23,5 @@
 <main>
   <slot></slot>
 </main>
-<Footer />
+<Footer pageColor={data.sectionInfo.sectionColor} />
+<div class="border-b-9 border-{data.sectionInfo.sectionColor}"></div>
