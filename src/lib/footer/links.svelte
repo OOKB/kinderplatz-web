@@ -1,6 +1,5 @@
 <script>
   import SubMenu from '$lib/el/sub-menu.svelte';
-  import { pages } from '$lib/page-info.js'
 
   $: linkClasses = "hover:text-natural-700 hover:underline hover:decoration-solid";
 
@@ -69,9 +68,9 @@
           <li><a class={linkClasses}  href="/gallery/">Kinderplatz Photos</a></li>
         </ul>
       </li>
-      <SubMenu {...pages.tuition} />
+      <!-- <SubMenu {...pages.tuition} />
       <SubMenu {...pages.credentials} />
-      <SubMenu {...pages.contact} />
+      <SubMenu {...pages.contact} /> -->
     </ul>
   </nav>
 </section>
