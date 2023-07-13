@@ -15,8 +15,8 @@
 
 <aside
   class="
-    order-2 flex flex-wrap
-    md:order-[initial] md:flex-1 md:top[-3em] md:block md:p-8
+    order-2 flex flex-wrap relative
+    md:order-[initial] md:flex-1 md:-top-[3em] md:block md:p-8 md:max-w-[30%]
     lg:flex-[2]
     xl:flex-1
   ">
