@@ -50,7 +50,7 @@
   {/if}
 
   {#if headings && headings.length > 1}
-    <h2 class={h2Classes}>Page Contents</h2>
+    <h2 class={h2Classes}>On This Page</h2>
     <section class={sectionClasses}>
       <ul class="">
         {#each headings as {id, title}}
@@ -61,7 +61,7 @@
   {/if}
 
   {#if pages && pages.length}
-    <h2 class={h2Classes}>Section Contents</h2>
+    <h2 class={h2Classes}>In This Section</h2>
     <section class={sectionClasses}>
       <ul class="">
         {#each pages as {slug, title}}
