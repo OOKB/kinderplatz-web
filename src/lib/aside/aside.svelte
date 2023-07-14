@@ -11,6 +11,9 @@
 
   let section = getContext('section')
   $: imgOverlay = `bg-${$section.sectionColor}-100`
+  $: linkColor = `text-${$section.sectionColor}`
+  $: h2Classes = "font-bold text-xl my-4 w-full order-2 md:w-auto md:order-[initial]";
+  $: sectionClasses = "w-full order-2 md:w-auto md:order-[initial] mb-8";
 
   function getSrc(image) {
     return image.src.replace('/images/', '/images/w450/')
@@ -45,32 +48,34 @@
         "></div>
     </div>
   {/if}
+
   {#if headings && headings.length > 1}
-    <h2 class="font-bold text-xl my-6 w-full order-2 md:w-auto md:order-[initial]">Page Contents</h2>
-    <section class="w-full order-2 md:w-auto md:order-[initial]">
+    <h2 class={h2Classes}>Page Contents</h2>
+    <section class={sectionClasses}>
       <ul class="">
         {#each headings as {id, title}}
-          <li><a class="text-{$pageColor}" href="#{id}">{title}</a></li>
+          <li><a class="{linkColor} underline block hover:bg-gray-100" href="#{id}">{title}</a></li>
         {/each}
       </ul>
     </section>
   {/if}
+
   {#if pages && pages.length}
-    <h2 class="font-bold text-xl my-6 w-full order-2 md:w-auto md:order-[initial]">Section Contents</h2>
-    <section class="w-full order-2 md:w-auto md:order-[initial]">
+    <h2 class={h2Classes}>Section Contents</h2>
+    <section class={sectionClasses}>
       <ul class="">
         {#each pages as {slug, title}}
-          <Link {pageColor} {slug} {title} />
+          <Link {pageColor} {slug} {title} classes="{linkColor} underline block hover:bg-gray-100" />
         {/each}
       </ul>
     </section>
   {/if}
   {#if links && links.length}
-    <h2 class="font-bold text-xl my-6 w-full order-2 md:w-auto md:order-[initial]">Related</h2>
-    <section class="w-full order-2 md:w-auto md:order-[initial]">
+    <h2 class={h2Classes}>Related</h2>
+    <section class={sectionClasses}>
       <ul class="">
         {#each links as {title, slug}}
-          <Link {pageColor} {slug} {title} />
+          <Link {pageColor} {slug} {title} classes="underline block hover:bg-gray-100" />
         {/each}
       </ul>
     </section>
