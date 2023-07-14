@@ -15,22 +15,30 @@
 
 <aside
   class="
-    order-2 flex flex-wrap relative
-    md:order-[initial] md:flex-1 md:-top-[3em] md:block md:p-8 md:max-w-[30%]
+    order-2 flex flex-wrap relative p-[1rem] bg-white w-full
+    md:order-[initial] md:flex-1 md:-top-[3em] md:block md:p-[2rem] md:pt-0 md:max-w-[30%]
     lg:flex-[2]
     xl:flex-1
   ">
   {#if _.get('[0].src', images)}
-    <div class="">
-      <img
+      <div class='
+        image-block
+        relative h-auto w-6/12 order-1 m-0 pb-0
+        md:w-auto md:mr-[-2rem] md:ml-[-2rem] md:mb-[1rem] md:order-[initial]
+        '>
+        <img
+          class="
+            block relative w-full z-[1]
+            border-white border-[0.1rem] border-solid;
+          "
         src="{getSrc(images[0])}"
         alt="{images[0].alt}"
       />
     </div>
   {/if}
   {#if headings && headings.length > 1}
-    <h2 class="font-bold text-xl my-6">Page Contents</h2>
-    <section>
+    <h2 class="font-bold text-xl my-6 w-full order-2 md:w-auto md:order-[initial]">Page Contents</h2>
+    <section class="w-full order-2 md:w-auto md:order-[initial]">
       <ul class="">
         {#each headings as {id, title}}
           <li><a class="text-{$pageColor}" href="#{id}">{title}</a></li>
@@ -39,8 +47,8 @@
     </section>
   {/if}
   {#if pages && pages.length}
-    <h2 class="font-bold text-xl my-6">Section Contents</h2>
-    <section>
+    <h2 class="font-bold text-xl my-6 w-full order-2 md:w-auto md:order-[initial]">Section Contents</h2>
+    <section class="w-full order-2 md:w-auto md:order-[initial]">
       <ul class="">
         {#each pages as {slug, title}}
           <Link {pageColor} {slug} {title} />
@@ -49,8 +57,8 @@
     </section>
   {/if}
   {#if links && links.length}
-    <h2 class="font-bold text-xl my-6">Related</h2>
-    <section>
+    <h2 class="font-bold text-xl my-6 w-full order-2 md:w-auto md:order-[initial]">Related</h2>
+    <section class="w-full order-2 md:w-auto md:order-[initial]">
       <ul class="">
         {#each links as {title, slug}}
           <Link {pageColor} {slug} {title} />
@@ -60,8 +68,16 @@
   {/if}
   {#if images && _.get('[1].src', images)}
     {#each images.slice(1) as image}
-      <div class="">
+      <div class='
+        image-block
+        relative h-auto w-6/12 order-1 m-0 pb-0
+        md:w-auto md:mr-[-2rem] md:ml-[-2rem] md:mt-[2rem] md:mb-[1rem] md:order-[initial]
+        '>
         <img
+          class="
+            block relative w-full z-[1]
+            border-white border-[0.1rem] border-solid;
+          "
           src="{getSrc(image)}"
           alt="{image.alt}"
         />
@@ -69,23 +85,3 @@
     {/each}
   {/if}
 </aside>
-
-<style>
-  aside div:first-child {
-    margin-top: -2em;
-  }
-  aside div {
-    position: relative;
-    padding-bottom: calc(100% + 4em);
-    height: 0;
-    background: white;
-    margin: 2em -2em 1em -2em;
-  }
-  aside div img {
-    position: relative;
-    width: 100%;
-    height: auto;
-    border: .1rem solid white;
-    z-index: 1;
-  }
-</style>
