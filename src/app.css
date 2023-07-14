@@ -25,8 +25,12 @@ article h3,
 article section section h2 {
   font-weight: bold;
 }
-article section > p:first-of-type {
+article section > p:nth-child(2) {
   @apply text-[1.25em];
+}
+article section ul {
+  list-style: disc;
+  margin-left: 1.25em;
 }
 
 
