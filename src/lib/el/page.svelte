@@ -2,8 +2,11 @@
   import { getContext } from 'svelte';
   import SvelteMarkdown from 'svelte-markdown'
   import LogoBanner from "$lib/el/logo-banner.svelte";
-  import { pageColor } from '$lib/stores.js';
+  import Contact from "$lib/section/contact.svelte"
+	import Credentials from '$lib/section/credentials.svelte';
+  // import { pageColor } from '$lib/stores.js';
 
+  export let id = ''
   export let title = ''
   export let content = ''
   let section = getContext('section')
@@ -32,6 +35,8 @@
 
     <section class={sectionClasses}>
       <slot name="article-bottom" />
+      {#if id === 'contact'} <Contact /> {/if}
+      {#if id === 'credentials'} <Credentials /> {/if}
     </section>
 
   </article>
