@@ -1,7 +1,0 @@
-query Contact {
-  page(id: "contact") {
-    id
-    title
-    content
-  }
-}
