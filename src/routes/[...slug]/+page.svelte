@@ -6,7 +6,7 @@
   export let data
 </script>
 
-<Page title={data.title} content={data.content}>
+<Page title={data.title} content={data.content} id={data.id}>
   {#if data.section}
     <Aside
       headings={data.headings}
