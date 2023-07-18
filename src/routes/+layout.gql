@@ -1,7 +1,16 @@
 query Sections {
-	sections(menuItemsOnly: true) {
+	sections {
 		sectionColor
+		menuItem
 		page {
+			title
+			slug
+		}
+    pages(hideSectionPage: true) {
+			title
+			slug
+		}
+		links {
 			title
 			slug
 		}

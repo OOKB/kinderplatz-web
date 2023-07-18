@@ -1,3 +1,12 @@
+type Block {
+  alt: String
+  color: String
+  id: Int!
+  img: String
+  link: String
+  word: String
+}
+
 type FileInfo {
   ctime: String!
   mtime: String!
@@ -23,12 +32,18 @@ type Page {
   id: ID!
   images: [Image]
   info: FileInfo
+
+  """Header Background"""
+  name: String
   section: Section
+  sectionId: String
   slug: String
   title: String
+  weight: Int
 }
 
 type Query {
+  blocks: [Block]
   page(id: ID!, isSlug: Boolean): Page
   pages: [Page]
   sections(menuItemsOnly: Boolean): [Section]
@@ -38,7 +53,8 @@ type Section {
   id: ID!
   images: [Image]
   links: [Page]
+  menuItem: Boolean
   page: Page
-  pages: [Page]
+  pages(hideSectionPage: Boolean): [Page]
   sectionColor: String
 }

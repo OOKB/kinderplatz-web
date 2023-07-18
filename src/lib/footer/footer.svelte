@@ -9,6 +9,7 @@
 	import Block from "./block.svelte";
 
   export let pageColor = ''
+  export let sectionLinks = []
   $: borderColor = `border-${pageColor}`;
 
 </script>
@@ -21,7 +22,7 @@
     <Accredited />
   </section>
 
-  <Links />
+  <Links {sectionLinks} />
 
   <Stripe />
 </footer>

@@ -7,7 +7,7 @@
   import "../app.css";
 
   export let data
-  $: ({ links } = data)
+  $: ({ links, sectionLinks } = data)
   // Create a store and update it when necessary...
   const section = writable();
   $: section.set(data.sectionInfo);
@@ -23,5 +23,5 @@
 <main>
   <slot></slot>
 </main>
-<Footer pageColor={data.sectionInfo.sectionColor} />
+<Footer pageColor={data.sectionInfo.sectionColor} {sectionLinks} />
 <div class="border-b-9 border-{data.sectionInfo.sectionColor}"></div>
