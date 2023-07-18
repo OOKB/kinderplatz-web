@@ -16,6 +16,7 @@ const colors = require('tailwindcss/colors')
 // 'pink': ,
 const pink = {
   ...colors.pink,
+  '100': 'rgba(204,102,153,.2)',
   '200': 'rgba(204,102,153,.2)',
   '300': 'rgba(204,102,153,.4)',
   '400': 'rgba(204,102,153,.55)',
@@ -153,7 +154,10 @@ module.exports = {
         'gold': '#78643c',
         'lightgreen': '#cbff32',
         'darkpurple': '#643264',
-      }
+      },
+      screens: {
+        '3xl': '1700px',
+      },
     },
     fontSize: {
       ...defaultTheme.fontSize,
