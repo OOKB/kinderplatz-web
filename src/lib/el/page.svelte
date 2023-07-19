@@ -12,6 +12,7 @@
   let section = getContext('section')
   $: lightBg = `bg-${$section.sectionColor}-100`
   const sectionClasses = `max-w-2xl text-xl leading-[1.618] md:max-w-4xl md:text-lg md:leading-normal`
+
 </script>
 
 <LogoBanner {title} pageColor={$section.sectionColor} />

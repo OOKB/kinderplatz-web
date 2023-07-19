@@ -1,8 +1,10 @@
 <script>
   import { onMount } from "svelte";
+
   import PhotoSwipeLightbox from 'photoswipe/lightbox';
   import PhotoSwipe  from 'photoswipe'
   import 'photoswipe/style.css';
+
   export let title = ''
   export let images = []
   export let id = ''
@@ -29,13 +31,13 @@
 
 <section>
   <!-- Infant/Toddler Wing -->
-  <div class="container">
-    <h4 class="bordertop">Infant/Toddler Wing</h4>
-    <ul class="flex flex-wrap pswp-gallery" id="{id}">
+  <div class="mb-12">
+    <h3 class="border-t border-solid border-pink pt-3">{title}</h3>
+    <ul class="w-full grid grid-cols-2 gap-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-9 pswp-gallery" id="{id}">
       {#each images as image}
-        <li class="p-1">
+        <li class="relative">
           <a
-            class=""
+            class="block w-full relative h-0 pb-[100%]"
             href="{image.src}"
             data-pswp-width={image.width}
             data-pswp-height={image.height}
@@ -43,7 +45,7 @@
             rel="noreferrer"
           >
             <img
-              class="object-cover w-40 h-40"
+              class="object-cover block w-full h-full absolute inset-0"
               srcset="{image.thumbnail.src}?dpr=1 1x,
                       {image.thumbnail.src}?dpr=2 2x,
                       {image.thumbnail.src}?dpr=2 3x"
@@ -56,3 +58,11 @@
     </ul>
   </div>
 </section>
+
+<style>
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>

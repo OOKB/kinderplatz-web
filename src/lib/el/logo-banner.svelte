@@ -5,6 +5,7 @@
   export let pageColor = ''
   $: bgColor = `bg-${pageColor}`
   $: h1Color = `bg-${pageColor}-500`
+
 </script>
 
 <div class="flex items-center justify-center min-h-[150px] h-[20vw] relative overflow-hidden {bgColor}">
