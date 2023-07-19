@@ -133,7 +133,8 @@ td::before {
 
 /** blockquote styles for testimonails page **/
 blockquote {
-  border-left: .25em solid rgba(204,102,153,1);
+  border-left: .25em solid;
+  border-color: inherit;
   margin-left: 0;
   margin-right: -1em;
   margin-bottom: 2em;

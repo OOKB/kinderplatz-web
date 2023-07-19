@@ -11,6 +11,7 @@
   export let content = ''
   let section = getContext('section')
   $: lightBg = `bg-${$section.sectionColor}-100`
+  $: borderColor = `border-${$section.sectionColor}`
   const sectionClasses = `max-w-2xl text-xl leading-[1.618] md:max-w-4xl md:text-lg md:leading-normal`
 
 </script>
@@ -30,8 +31,8 @@
       max-w-5xl
     ">
 
-    <section class={sectionClasses}>
-      <SvelteMarkdown source={content} />
+    <section class="{sectionClasses} {borderColor}">
+      <SvelteMarkdown source={content}/>
     </section>
 
     <section class={sectionClasses}>
