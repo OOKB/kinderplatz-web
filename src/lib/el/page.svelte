@@ -29,6 +29,7 @@
       lg:flex-[5] lg:mr-8 lg:pt-8
       xl:flex-[7] xl:mr-16 xl:p-8
       max-w-5xl
+      {title}
     ">
 
     <section class="{sectionClasses} {borderColor}">

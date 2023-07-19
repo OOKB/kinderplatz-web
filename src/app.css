@@ -152,6 +152,12 @@ blockquote {
   }
 }
 
+.Testimonials blockquote {
+  font-size: 133%;
+  max-width: 80%;
+  margin-bottom: 2em;
+}
+
 /* Blockquote right double quotes */
 blockquote:after {
   position: absolute;

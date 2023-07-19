@@ -43,7 +43,7 @@
       />
       <div class="
         color-overlay
-        block absolute inset-1 z-[2]
+        block absolute inset-0 z-[2]
         {imgOverlay}
         "></div>
     </div>
@@ -97,7 +97,7 @@
         />
         <div class="
           color-overlay
-          block absolute inset-1 z-[2]
+          block absolute inset-0 z-[2]
           {imgOverlay}
           "></div>
       </div>
