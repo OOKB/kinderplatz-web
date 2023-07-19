@@ -5,7 +5,7 @@
   export let linkClasses = ''
 </script>
 
-<li class="mb-12">
+<li class="mb-4 md:mb-8 xl:mb-12">
   <a class={linkClasses} href="/{slug}">{title}</a>
   <ul class="list-reset ml-6">
     {#each links as link}
